@@ -13,7 +13,6 @@ public class AdminKontsola {
 		String pasahitza = "";
 		boolean balidatuta = false;
 		System.out.println("Ongi etorri admin menura");
-		do {
 
 			System.out.println("Erabiltzailea: ");
 			erabiltzailea = sc.nextLine();
@@ -21,11 +20,11 @@ public class AdminKontsola {
 			pasahitza = sc.nextLine();
 			balidatuta = Balidazioak.balidatuGakoa(erabiltzailea, pasahitza);
 			if (balidatuta == false) {
-				System.out.println("Erabiltzailea edo pasahitza okerra da");
-				System.out.println("Sartu berriro");
-				System.out.println("");
+				OngiEtorri ongiEtorri = new OngiEtorri();
+				ongiEtorri.show(); // Muestra la ventana gráfica
+				boolean atera = true; // Esto hace que el bucle se detenga
+				return; // Evita que el flujo continúe ejecutándose
 			}
-		} while (balidatuta == false);
 
 		menu.menu1();
 

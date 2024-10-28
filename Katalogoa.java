@@ -20,7 +20,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Color;
 
-
 public class Katalogoa {
 
 	private JFrame frame;
@@ -47,29 +46,17 @@ public class Katalogoa {
 	private JLabel lblProd;
 	private ImageIcon imageIcon1;
 	private JLabel imgLabelProd;
-	//instancia la clase.
+	// instancia la clase.
 	private Metodoak kontsola = new Metodoak();
 
-	
-	
 	/*
-	private JPanel panelProd2;
-	private JPanel panelProd3;
-	private JPanel panelProd4;
-	private JPanel panelProd5;
-	private JPanel panelProd6;
-	private JPanel panelProd7;
-	private JPanel panelProd8;
-	private JPanel panelProd9;
-	private JLabel lblProd2;
-	private JLabel lblProd3;
-	private JLabel lblProd4;
-	private JLabel lblProd5;
-	private JLabel lblProd6;
-	private JLabel lblProd7;
-	private JLabel lblProd8;
-	private JLabel lblProd9;
-	*/
+	 * private JPanel panelProd2; private JPanel panelProd3; private JPanel
+	 * panelProd4; private JPanel panelProd5; private JPanel panelProd6; private
+	 * JPanel panelProd7; private JPanel panelProd8; private JPanel panelProd9;
+	 * private JLabel lblProd2; private JLabel lblProd3; private JLabel lblProd4;
+	 * private JLabel lblProd5; private JLabel lblProd6; private JLabel lblProd7;
+	 * private JLabel lblProd8; private JLabel lblProd9;
+	 */
 
 	public void show() {
 		initialize(null);
@@ -79,118 +66,83 @@ public class Katalogoa {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-    // Método de inicialización de la GUI
-    private void initialize(String mota) {
-        frame = new JFrame();
-        frame.setBounds(100, 100, 883, 640);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
-        
-        // Configura tu GUI como lo tenías antes
-        panela = new JPanel();
-        panela.setBounds(0, 0, 867, 134);
-        frame.getContentPane().add(panela);
-        panela.setLayout(null);
+	// Método de inicialización de la GUI
+	private void initialize(String mota) {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 883, 640);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
 
-        panelb = new JPanel();
-        panelb.setBounds(0, 133, 586, 468);
-        frame.getContentPane().add(panelb);
-        panelb.setLayout(null);
+		// Configura tu GUI como lo tenías antes
+		panela = new JPanel();
+		panela.setBounds(0, 0, 867, 134);
+		frame.getContentPane().add(panela);
+		panela.setLayout(null);
 
-        //ºpanelGenerator(mota);
-		
+		panelb = new JPanel();
+		panelb.setBounds(0, 133, 586, 468);
+		frame.getContentPane().add(panelb);
+		panelb.setLayout(null);
+
+		// ºpanelGenerator(mota);
+
 		/*
-		imageIcon1 = new ImageIcon(this.getClass().getResource("/chocoBoombl.jpg"));
-		Image image1 = imageIcon1.getImage().getScaledInstance(lbl1.getWidth(), lbl1.getHeight(),
-				Image.SCALE_SMOOTH);
-		imageIcon1.setImage(image1);
-		lbl1.setIcon(imageIcon1);
-		
-		panelProd2 = new JPanel();
-		panelProd2.setBounds(191, 304, 81, 109);
-		panelb.add(panelProd2);
-		panelProd2.setLayout(null);
-
-		panelProd3 = new JPanel();
-		panelProd3.setBounds(335, 304, 81, 109);
-		panelb.add(panelProd3);
-		panelProd3.setLayout(null);
-
-		panelProd4 = new JPanel();
-		panelProd4.setBounds(53, 166, 81, 109);
-		panelb.add(panelProd4);
-		panelProd4.setLayout(null);
-
-		panelProd5 = new JPanel();
-		panelProd5.setBounds(190, 166, 81, 109);
-		panelb.add(panelProd5);
-		panelProd5.setLayout(null);
-
-		panelProd6 = new JPanel();
-		panelProd6.setBounds(334, 166, 81, 109);
-		panelb.add(panelProd6);
-		panelProd6.setLayout(null);
-
-		panelProd7 = new JPanel();
-		panelProd7.setBounds(53, 31, 81, 109);
-		panelb.add(panelProd7);
-		panelProd7.setLayout(null);
-
-		panelProd8 = new JPanel();
-		panelProd8.setBounds(191, 31, 81, 109);
-		panelb.add(panelProd8);
-		panelProd8.setLayout(null);
-
-		panelProd9 = new JPanel();
-		panelProd9.setBounds(335, 31, 81, 109);
-		panelb.add(panelProd9);
-		panelProd9.setLayout(null);
-
-		lblProd1 = new JLabel("");
-		lblProd1.setEnabled(false);
-		lblProd1.setBounds(69, 420, 46, 14);
-		panelb.add(lblProd1);
-
-		lblProd2 = new JLabel("");
-		lblProd2.setEnabled(false);
-		lblProd2.setBounds(209, 422, 46, 14);
-		panelb.add(lblProd2);
-
-		lblProd3 = new JLabel("");
-		lblProd3.setEnabled(false);
-		lblProd3.setBounds(354, 422, 46, 14);
-		panelb.add(lblProd3);
-
-		lblProd4 = new JLabel("");
-		lblProd4.setEnabled(false);
-		lblProd4.setBounds(70, 282, 46, 14);
-		panelb.add(lblProd4);
-
-		lblProd5 = new JLabel("");
-		lblProd5.setEnabled(false);
-		lblProd5.setBounds(209, 283, 46, 14);
-		panelb.add(lblProd5);
-
-		lblProd6 = new JLabel("");
-		lblProd6.setEnabled(false);
-		lblProd6.setBounds(352, 283, 46, 14);
-		panelb.add(lblProd6);
-
-		lblProd7 = new JLabel("");
-		lblProd7.setEnabled(false);
-		lblProd7.setBounds(73, 145, 46, 14);
-		panelb.add(lblProd7);
-
-		lblProd8 = new JLabel("");
-		lblProd8.setEnabled(false);
-		lblProd8.setBounds(208, 145, 46, 14);
-		panelb.add(lblProd8);
-
-		lblProd9 = new JLabel("");
-		lblProd9.setEnabled(false);
-		lblProd9.setBounds(353, 145, 46, 14);
-		panelb.add(lblProd9);
-		*/
+		 * imageIcon1 = new ImageIcon(this.getClass().getResource("/chocoBoombl.jpg"));
+		 * Image image1 = imageIcon1.getImage().getScaledInstance(lbl1.getWidth(),
+		 * lbl1.getHeight(), Image.SCALE_SMOOTH); imageIcon1.setImage(image1);
+		 * lbl1.setIcon(imageIcon1);
+		 * 
+		 * panelProd2 = new JPanel(); panelProd2.setBounds(191, 304, 81, 109);
+		 * panelb.add(panelProd2); panelProd2.setLayout(null);
+		 * 
+		 * panelProd3 = new JPanel(); panelProd3.setBounds(335, 304, 81, 109);
+		 * panelb.add(panelProd3); panelProd3.setLayout(null);
+		 * 
+		 * panelProd4 = new JPanel(); panelProd4.setBounds(53, 166, 81, 109);
+		 * panelb.add(panelProd4); panelProd4.setLayout(null);
+		 * 
+		 * panelProd5 = new JPanel(); panelProd5.setBounds(190, 166, 81, 109);
+		 * panelb.add(panelProd5); panelProd5.setLayout(null);
+		 * 
+		 * panelProd6 = new JPanel(); panelProd6.setBounds(334, 166, 81, 109);
+		 * panelb.add(panelProd6); panelProd6.setLayout(null);
+		 * 
+		 * panelProd7 = new JPanel(); panelProd7.setBounds(53, 31, 81, 109);
+		 * panelb.add(panelProd7); panelProd7.setLayout(null);
+		 * 
+		 * panelProd8 = new JPanel(); panelProd8.setBounds(191, 31, 81, 109);
+		 * panelb.add(panelProd8); panelProd8.setLayout(null);
+		 * 
+		 * panelProd9 = new JPanel(); panelProd9.setBounds(335, 31, 81, 109);
+		 * panelb.add(panelProd9); panelProd9.setLayout(null);
+		 * 
+		 * lblProd1 = new JLabel(""); lblProd1.setEnabled(false); lblProd1.setBounds(69,
+		 * 420, 46, 14); panelb.add(lblProd1);
+		 * 
+		 * lblProd2 = new JLabel(""); lblProd2.setEnabled(false);
+		 * lblProd2.setBounds(209, 422, 46, 14); panelb.add(lblProd2);
+		 * 
+		 * lblProd3 = new JLabel(""); lblProd3.setEnabled(false);
+		 * lblProd3.setBounds(354, 422, 46, 14); panelb.add(lblProd3);
+		 * 
+		 * lblProd4 = new JLabel(""); lblProd4.setEnabled(false); lblProd4.setBounds(70,
+		 * 282, 46, 14); panelb.add(lblProd4);
+		 * 
+		 * lblProd5 = new JLabel(""); lblProd5.setEnabled(false);
+		 * lblProd5.setBounds(209, 283, 46, 14); panelb.add(lblProd5);
+		 * 
+		 * lblProd6 = new JLabel(""); lblProd6.setEnabled(false);
+		 * lblProd6.setBounds(352, 283, 46, 14); panelb.add(lblProd6);
+		 * 
+		 * lblProd7 = new JLabel(""); lblProd7.setEnabled(false); lblProd7.setBounds(73,
+		 * 145, 46, 14); panelb.add(lblProd7);
+		 * 
+		 * lblProd8 = new JLabel(""); lblProd8.setEnabled(false);
+		 * lblProd8.setBounds(208, 145, 46, 14); panelb.add(lblProd8);
+		 * 
+		 * lblProd9 = new JLabel(""); lblProd9.setEnabled(false);
+		 * lblProd9.setBounds(353, 145, 46, 14); panelb.add(lblProd9);
+		 */
 
 		panelc = new JPanel();
 		panelc.setBounds(586, 133, 281, 468);
@@ -347,53 +299,53 @@ public class Katalogoa {
 		btnatzera.setBounds(23, 26, 45, 23);
 		panela.add(btnatzera);
 
-        frame.setVisible(true); // Asegúrate de que esto esté al final
-    }
+		frame.setVisible(true); // Asegúrate de que esto esté al final
+	}
+
 	public void panelGenerator(String mota) {
-	    int width = 100;  // Ancho de cada panel de producto
-	    int height = 150; // Altura de cada panel de producto
-	    int spacing = 10; // Espacio entre paneles
-	    
-	    // Configuración de la cuadrícula 3x3
-	    int columns = 3;  
-	    int rows = 3;  
+		int width = 100; // Ancho de cada panel de producto
+		int height = 150; // Altura de cada panel de producto
+		int spacing = 10; // Espacio entre paneles
 
-	    for (int i = 0; i < kontsola.argazkiIzenak.length; i++) {
-	        // Calcular la fila y columna actuales
-	        int row = i / columns;
-	        int col = i % columns;
+		// Configuración de la cuadrícula 3x3
+		int columns = 3;
+		int rows = 3;
 
-	        // Calcular la posición del panel dentro de panelb
-	        int posX = col * (width + spacing);
-	        int posY = row * (height + spacing);
-	        // Cargar y añadir la imagen del producto
-	        ImageIcon imageIcon = new ImageIcon(this.getClass().getResource("/sources/chocoBoomBl.jpg"));
-	        Image image = imageIcon.getImage().getScaledInstance(width - 10, height - 60, Image.SCALE_SMOOTH);
-	        imageIcon.setImage(image);
-	        JLabel imgLabelProd = new JLabel(imageIcon);
-	        imgLabelProd.setBounds(5, 5, width - 10, height - 60);
-	        panelProd.add(imgLabelProd);
-	        	 // Crear el panel de cada producto
-		        JPanel panelProd = new JPanel();
-		        panelProd.setBounds(posX, posY, width, height);
-		        panelProd.setLayout(null);
-		        panelb.add(panelProd);
-		        System.out.println(kontsola.argazkiIzenak[i]);
-		        
+		for (int i = 0; i < kontsola.argazkiIzenak.length; i++) {
+			// Calcular la fila y columna actuales
+			int row = i / columns;
+			int col = i % columns;
 
-		        
+			// Calcular la posición del panel dentro de panelb
+			int posX = col * (width + spacing);
+			int posY = row * (height + spacing);
+			// Cargar y añadir la imagen del producto
+			ImageIcon imageIcon = new ImageIcon(this.getClass().getResource("/sources/" + ".jpg"));
+			Image image = imageIcon.getImage().getScaledInstance(width - 10, height - 60, Image.SCALE_SMOOTH);
+			imageIcon.setImage(image);
+			JLabel imgLabelProd = new JLabel(imageIcon);
+			imgLabelProd.setBounds(5, 5, width - 10, height - 60);
+			panelProd.add(imgLabelProd);
 
-		        // Añadir etiqueta con el nombre del producto
-		        JLabel lblNombre = new JLabel(kontsola.izenak[i]);
-		        lblNombre.setBounds(5, height - 45, width - 10, 20);
-		        lblNombre.setHorizontalAlignment(SwingConstants.CENTER);
-		        panelProd.add(lblNombre);
+			// Crear el panel de cada producto
+			JPanel panelProd = new JPanel();
+			panelProd.setBounds(posX, posY, width, height);
+			panelProd.setLayout(null);
+			panelb.add(panelProd);
+			System.out.println(kontsola.argazkiIzenak[i]);
 
-		        // Añadir etiqueta con el precio del producto
-		        JLabel lblPrecio = new JLabel("€" + kontsola.prezioak[i]);
-		        lblPrecio.setBounds(5, height - 25, width - 10, 20);
-		        lblPrecio.setHorizontalAlignment(SwingConstants.CENTER);
-		        panelProd.add(lblPrecio);
-	       
-	    }}
+			// Añadir etiqueta con el nombre del producto
+			JLabel lblNombre = new JLabel(kontsola.izenak[i]);
+			lblNombre.setBounds(5, height - 45, width - 10, 20);
+			lblNombre.setHorizontalAlignment(SwingConstants.CENTER);
+			panelProd.add(lblNombre);
+
+			// Añadir etiqueta con el precio del producto
+			JLabel lblPrecio = new JLabel("€" + kontsola.prezioak[i]);
+			lblPrecio.setBounds(5, height - 25, width - 10, 20);
+			lblPrecio.setHorizontalAlignment(SwingConstants.CENTER);
+			panelProd.add(lblPrecio);
+
+		}
+	}
 }
