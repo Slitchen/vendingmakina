@@ -1,4 +1,4 @@
-package vendingMaquina;
+package erronka;
 
 public class Balidazioak {
 	public static boolean balidazio1(int aukera, String saukera) {

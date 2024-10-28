@@ -1,4 +1,4 @@
-package vendingMaquina;
+package erronka;
 
 import java.util.Scanner;
 
@@ -152,13 +152,6 @@ public class Metodoak {
 				System.out.println("Ipini produktuen argazki izena: ");
 				argazkiIzenak[produktuKop] = sc.nextLine();
 				produktuKop++; // Incrementar el contador de productos
-				
-				System.out.println("Produktuak");
-				for (int h = 0; h < izenak.length; h++) {
-					if(izenak[h]!=null) {
-					System.out.println(h+"."+" "+"Mota: "+motak[h]+" "+"Izena: "+izenak[h]+" "+"Kodea: "+kodeak[h]+" "+"Prezioa: "+prezioak[h]+"€"+" "+"Argazki_Izena: "+argazkiIzenak[h]);
-					}
-				}	
 				break;
 			case 2:
 				// Ezabatu produktuak
@@ -192,13 +185,6 @@ public class Metodoak {
 						argazkiIzenak[produktuKop - 1] = null; // Opcional: limpiar el último elemento
 						produktuKop--; // Reducir el contador de productos
 						System.out.println("Produktu ezabatu da.");
-						
-						System.out.println("Produktuak");
-						for (int h = 0; h < izenak.length; h++) {
-							if(izenak[h]!=null) {
-							System.out.println(h+1+"."+" "+"Mota: "+motak[h]+" "+"Izena: "+izenak[h]+" "+"Kodea: "+kodeak[h]+" "+"Prezioa: "+prezioak[h]+"€"+" "+"Argazki_Izena: "+argazkiIzenak[h]);
-							}
-						}	
 						break;
 					}
 				}
@@ -241,15 +227,8 @@ public class Metodoak {
 						System.out.println("Ipini produktuen argazki izen berria: ");
 						argazkiIzenak[produktuKop-1] = sc.nextLine();
 						System.out.println("Produktu aldatu da.");
-					}
-					System.out.println("Produktuak");
-					for (int h = 0; h < izenak.length; h++) {
-						if(izenak[h]!=null) {
-						System.out.println(h+1+"."+" "+"Mota: "+motak[h]+" "+"Izena: "+izenak[h]+" "+"Kodea: "+kodeak[h]+" "+"Prezioa: "+prezioak[h]+"€"+" "+"Argazki_SIzena: "+argazkiIzenak[h]);
-						}
 					}	
 				}
-				System.out.println("Ez dago produkturik");
 				break;
 			case 4:
 					System.out.println("Produktuak");

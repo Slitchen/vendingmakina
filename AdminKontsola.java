@@ -1,4 +1,4 @@
-package vendingMaquina;
+package erronka;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package vendingMaquina;
+package erronka;
 
 import java.awt.EventQueue;
 import java.awt.Image;
@@ -12,12 +12,6 @@ import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
-
-import Mierda.edarikatalogo;
-import Mierda.erretzailekatalogo;
-import Mierda.janarikatalogo;
-import Mierda.sexshopkatalogo;
-
 import java.awt.Font;
 import java.awt.Color;
 import java.awt.SystemColor;
