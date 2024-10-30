@@ -19,16 +19,23 @@ import java.awt.SystemColor;
 public class ProduktuMenua {
 
 	private JFrame frame;
-	private JButton btnsexshop;
-	private JButton btnedaria;
-	private JButton btnBack;
-	private JPanel panelEdariak;
+	private KatalogoJanaria generator = new KatalogoJanaria();
+	private JPanel panelEdaria;
+	private JPanel panelA;
+	private JLabel lblIzenburua;
+	private JPanel panelB;
+	private JButton btnEdaria;
 	private JPanel panelJanaria;
-	private JButton btnjanaria;
-	private JPanel panelSexShop;
-	private JPanel panelArtFumador;
-	private JButton btnerretzaile;
-	private Katalogoa generator = new Katalogoa();
+	private JButton btnJanaria;
+	private JPanel panelSexshop;
+	private JButton btnSex;
+	private JPanel panelErretzaile;
+	private JButton btnErretzaile;
+	private JButton btnAtzera;
+	private ImageIcon imageIcon1;
+	private ImageIcon imageIcon2;
+	private ImageIcon imageIcon3;
+	private ImageIcon imageIcon4;
 
 	/**
 	 * @wbp.parser.entryPoint
@@ -52,143 +59,127 @@ public class ProduktuMenua {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		panelEdariak = new JPanel();
-		panelEdariak.setBackground(SystemColor.controlLtHighlight);
-		panelEdariak.setBounds(10, 11, 81, 109);
-		frame.getContentPane().add(panelEdariak);
-		panelEdariak.setLayout(null);
+		panelA = new JPanel();
+		panelA.setBounds(0, 0, 434, 70);
+		frame.getContentPane().add(panelA);
+		panelA.setLayout(null);
 
-		btnedaria = new JButton("New button");
-		btnedaria.addActionListener(new ActionListener() {
+		lblIzenburua = new JLabel("Produktu Menua");
+		lblIzenburua.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIzenburua.setFont(new Font("Colonna MT", Font.PLAIN, 39));
+		lblIzenburua.setEnabled(false);
+		lblIzenburua.setBounds(71, 11, 305, 48);
+		panelA.add(lblIzenburua);
+
+		panelB = new JPanel();
+		panelB.setLayout(null);
+		panelB.setBounds(0, 70, 434, 191);
+		frame.getContentPane().add(panelB);
+
+		panelEdaria = new JPanel();
+		panelEdaria.setLayout(null);
+		panelEdaria.setBackground(SystemColor.controlLtHighlight);
+		panelEdaria.setBounds(10, 34, 81, 109);
+		panelB.add(panelEdaria);
+
+		btnEdaria = new JButton("");
+		btnEdaria.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//generator.panelGenerator("edaria");
-				Katalogoa katalogoa = new Katalogoa();
-				katalogoa.show();
+				KatalogoEdaria katalogoEdaria = new KatalogoEdaria();
+				katalogoEdaria.show();
 				frame.dispose();
 			}
 		});
-		btnedaria.setIcon(new ImageIcon(ProduktuMenua.class.getResource("/chocoBoombl.jpg")));
-		btnedaria.setBackground(SystemColor.controlLtHighlight);
-		btnedaria.setBounds(0, 0, 81, 109);
-		panelEdariak.add(btnedaria);
+		btnEdaria.setBounds(0, 0, 81, 109);
+		panelEdaria.add(btnEdaria);
 
 		panelJanaria = new JPanel();
-		panelJanaria.setBackground(SystemColor.controlLtHighlight);
-		panelJanaria.setBounds(115, 11, 81, 109);
-		frame.getContentPane().add(panelJanaria);
 		panelJanaria.setLayout(null);
+		panelJanaria.setBackground(SystemColor.controlLtHighlight);
+		panelJanaria.setBounds(114, 34, 81, 109);
+		panelB.add(panelJanaria);
 
-		btnjanaria = new JButton("New button");
-		btnjanaria.addActionListener(new ActionListener() {
+		btnJanaria = new JButton("");
+		btnJanaria.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//generator.panelGenerator("janaria");
-				Katalogoa katalogoa = new Katalogoa();
-				katalogoa.show();
+				KatalogoJanaria katalogoJanaria = new KatalogoJanaria();
+				katalogoJanaria.show();
 				frame.dispose();
 			}
 		});
-		btnjanaria.setBackground(SystemColor.controlLtHighlight);
-		btnjanaria.setBounds(0, 0, 81, 109);
-		panelJanaria.add(btnjanaria);
+		btnJanaria.setBounds(0, 0, 81, 109);
+		panelJanaria.add(btnJanaria);
 
-		panelSexShop = new JPanel();
-		panelSexShop.setBackground(SystemColor.controlLtHighlight);
-		panelSexShop.setBounds(222, 11, 81, 109);
-		frame.getContentPane().add(panelSexShop);
-		panelSexShop.setLayout(null);
+		panelSexshop = new JPanel();
+		panelSexshop.setLayout(null);
+		panelSexshop.setBackground(SystemColor.controlLtHighlight);
+		panelSexshop.setBounds(233, 34, 81, 109);
+		panelB.add(panelSexshop);
 
-		btnsexshop = new JButton("New button");
-		btnsexshop.addActionListener(new ActionListener() {
+		btnSex = new JButton("");
+		btnSex.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//generator.panelGenerator("sexshop");
-				Katalogoa katalogoa = new Katalogoa();
-				katalogoa.show();
+				KatalogoSexshop katalogoSexshop = new KatalogoSexshop();
+				katalogoSexshop.show();
 				frame.dispose();
 			}
 		});
-		btnsexshop.setIcon(new ImageIcon(ProduktuMenua.class.getResource("/chocoBoombl.jpg")));
-		btnsexshop.setBackground(SystemColor.controlLtHighlight);
-		btnsexshop.setBounds(0, 0, 81, 109);
-		panelSexShop.add(btnsexshop);
+		btnSex.setBounds(0, 0, 81, 109);
+		panelSexshop.add(btnSex);
 
-		panelArtFumador = new JPanel();
-		panelArtFumador.setBackground(SystemColor.controlLtHighlight);
-		panelArtFumador.setBounds(328, 11, 81, 109);
-		frame.getContentPane().add(panelArtFumador);
-		panelArtFumador.setLayout(null);
+		panelErretzaile = new JPanel();
+		panelErretzaile.setLayout(null);
+		panelErretzaile.setBackground(SystemColor.controlLtHighlight);
+		panelErretzaile.setBounds(343, 34, 81, 109);
+		panelB.add(panelErretzaile);
 
-		btnerretzaile = new JButton("New button");
-		btnerretzaile.addActionListener(new ActionListener() {
+		btnErretzaile = new JButton("");
+		btnErretzaile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//generator.panelGenerator("e");
-				Katalogoa katalogoa = new Katalogoa();
-				katalogoa.show();
+				KatalogoErretzaile katalogoErretzaile = new KatalogoErretzaile();
+				katalogoErretzaile.show();
 				frame.dispose();
 			}
 		});
-		btnerretzaile.setIcon(new ImageIcon(ProduktuMenua.class.getResource("/chocoBoombl.jpg")));
-		btnerretzaile.setBackground(SystemColor.controlLtHighlight);
-		btnerretzaile.setBounds(0, 0, 81, 109);
-		panelArtFumador.add(btnerretzaile);
-
-		btnBack = new JButton("Atzera");
-		btnBack.setBounds(141, 200, 150, 50);
-		btnBack.addActionListener(new ActionListener() {
+		btnErretzaile.setBounds(0, 0, 81, 109);
+		panelErretzaile.add(btnErretzaile);
+		
+		btnAtzera = new JButton("<-");
+		btnAtzera.setForeground(new Color(255, 0, 0));
+		btnAtzera.setBackground(new Color(255, 69, 0));
+		btnAtzera.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				OngiEtorri ongiEtorri = new OngiEtorri();
-				ongiEtorri.frame.setVisible(true);
+				ongiEtorri.show();
 				frame.dispose();
 			}
 		});
-		frame.getContentPane().add(btnBack);
+		btnAtzera.setBounds(10, 11, 45, 23);
+		panelA.add(btnAtzera);
 
-		ImageIcon imageIcon1 = new ImageIcon(this.getClass().getResource("/torolocoopalo.jpg"));
-		Image image = imageIcon1.getImage().getScaledInstance(panelEdariak.getWidth(), panelEdariak.getHeight(),
+		imageIcon1 = new ImageIcon(this.getClass().getResource("/torolocoOpalo.jpg"));
+		Image image1 = imageIcon1.getImage().getScaledInstance(btnEdaria.getWidth(), btnEdaria.getHeight(),
 				Image.SCALE_SMOOTH);
-		imageIcon1.setImage(image);
-		btnedaria.setIcon(imageIcon1);
-
-		ImageIcon imageIcon2 = new ImageIcon(this.getClass().getResource("/chocoBoombl.jpg"));
-		Image image2 = imageIcon2.getImage().getScaledInstance(panelJanaria.getWidth(), panelJanaria.getHeight(),
+		imageIcon1.setImage(image1);
+		btnEdaria.setIcon(imageIcon1);
+		
+		imageIcon2 = new ImageIcon(this.getClass().getResource("/chocoBoombl.jpg"));
+		Image image2 = imageIcon2.getImage().getScaledInstance(btnJanaria.getWidth(), btnJanaria.getHeight(),
 				Image.SCALE_SMOOTH);
 		imageIcon2.setImage(image2);
-		btnjanaria.setIcon(imageIcon2);
-
-		ImageIcon imageIcon3 = new ImageIcon(this.getClass().getResource("/condonesdurex1.jpg"));
-		Image image3 = imageIcon3.getImage().getScaledInstance(panelSexShop.getWidth(), panelSexShop.getHeight(),
+		btnJanaria.setIcon(imageIcon2);
+		
+		imageIcon3 = new ImageIcon(this.getClass().getResource("/fumarMata.jpg"));
+		Image image3 = imageIcon3.getImage().getScaledInstance(btnErretzaile.getWidth(), btnErretzaile.getHeight(),
 				Image.SCALE_SMOOTH);
 		imageIcon3.setImage(image3);
-		btnsexshop.setIcon(imageIcon3);
-
-		ImageIcon imageIcon4 = new ImageIcon(this.getClass().getResource("/fumarMata.jpg"));
-		Image image4 = imageIcon4.getImage().getScaledInstance(panelArtFumador.getWidth(), panelArtFumador.getHeight(),
+		btnErretzaile.setIcon(imageIcon3);
+		
+		imageIcon4 = new ImageIcon(this.getClass().getResource("/condonesDurex1.jpg"));
+		Image image4 = imageIcon4.getImage().getScaledInstance(btnSex.getWidth(), btnSex.getHeight(),
 				Image.SCALE_SMOOTH);
 		imageIcon4.setImage(image4);
-		btnerretzaile.setIcon(imageIcon4);
-
-		JLabel lblEdariak = new JLabel("EDARIAK");
-		lblEdariak.setFont(new Font("Arial Black", Font.BOLD, 11));
-		lblEdariak.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEdariak.setBounds(10, 131, 81, 14);
-		frame.getContentPane().add(lblEdariak);
-
-		JLabel lblJanaria = new JLabel("JANARIA");
-		lblJanaria.setFont(new Font("Arial Black", Font.BOLD, 11));
-		lblJanaria.setHorizontalAlignment(SwingConstants.CENTER);
-		lblJanaria.setBounds(115, 131, 81, 14);
-		frame.getContentPane().add(lblJanaria);
-
-		JLabel lblSexShop = new JLabel("SEXSHOP");
-		lblSexShop.setFont(new Font("Arial Black", Font.BOLD, 11));
-		lblSexShop.setHorizontalAlignment(SwingConstants.CENTER);
-		lblSexShop.setBounds(222, 131, 81, 14);
-		frame.getContentPane().add(lblSexShop);
-
-		JLabel lblErretzaileak = new JLabel("ERRETZAILEAK");
-		lblErretzaileak.setFont(new Font("Arial Black", Font.BOLD, 11));
-		lblErretzaileak.setHorizontalAlignment(SwingConstants.CENTER);
-		lblErretzaileak.setBounds(313, 131, 111, 14);
-		frame.getContentPane().add(lblErretzaileak);
+		btnSex.setIcon(imageIcon4);
 
 	}
 }
